@@ -3,5 +3,6 @@ class Admin::DashboardController < ApplicationController
   def show
     @product = Product.all
     @total_quantity = @product.sum(:quantity)
+    @total_categories = @product.count(:category_id)
   end
 end
