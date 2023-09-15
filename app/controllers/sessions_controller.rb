@@ -1,5 +1,9 @@
 class SessionsController < ApplicationController
   # app/controllers/sessions_controller.rb
+  
+# def new
+  
+# end
 
   def create
     user = User.find_by_email(params[:email])
