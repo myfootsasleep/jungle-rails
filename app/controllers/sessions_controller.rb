@@ -1,4 +1,4 @@
-class SessionController < ApplicationController
+class SessionsController < ApplicationController
   # app/controllers/sessions_controller.rb
 
   def create
@@ -17,5 +17,6 @@ class SessionController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to '/login'
+    redirect_to '/'
   end
+end
