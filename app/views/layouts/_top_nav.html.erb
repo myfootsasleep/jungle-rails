@@ -71,8 +71,15 @@
     </div>
   </div>
   <div>
-  
   </div>
+ <% if current_user %>
+       Signed in as<%= current_user.username %>  
+       
+        <%= link_to 'Logout', '/logout', class: "btn btn-danger" %>
+      <% else %>
+        <%= link_to 'Login', '/login', class: "btn btn-primary" %>
+        <%= link_to 'Sign Up', '/signup', class: "btn btn-success" %>
+      <% end %>
 </nav>
 <script>
 (function(){
